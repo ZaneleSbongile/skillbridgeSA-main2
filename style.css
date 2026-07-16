@@ -80,7 +80,8 @@ body {
 }
 
 h1 { 
-    font-weight: 80px; 
+    gap: 0px;
+    font-weight: 100px; 
     font-family: 'Barlow Condensed';
     color: #fff; 
     line-height: 1.1; 
