@@ -12,6 +12,9 @@ body {
 
 /* Navbar */
 .navbar { 
+    position: sticky;
+    top: 0;           /*where to stick */
+    z-index: 1000;    /* stays above other content */
     background-color: #0E2B8A;
     display: flex; 
     align-items: center; 
