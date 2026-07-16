@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CustomerSupportBot.css" />
+    <title>Document</title>
+</head>
+<body>
+    
+  <header>
+  <!-- Main Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">SkillBridgeSA</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="internships.html">Internships</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="signin.html" class="nav-signin">→ Sign In</a>
+      <a href="login.html" class="btn-join">Join Free</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">SOUTH AFRICA'S DIGITAL SKILLS ECOSYSTEM</div>
+      <h1 style="font-size: 32px; color: yellow;">
+
+      TALENT MEETS OPPORTUNITY
+        </h1>
+        <h1 style="font-size: 32px; color: red;">IN SA</h1>
+      <p>The bridge connecting skilled individuals, growing businesses, and ambitious students — driving South Africa's economic development together.</p>
+      <div class="hero-buttons">
+        <button class="btn-yellow">Find Services →</button>
+        <button class="btn-outline">Post Your Skills</button>
+      </div>
+    </div>
+    <div class="hero-image">
+        <img src="web.png" alt="Description of the image">
+      <div class="stats-box">R2.1B+ <br><span>Paid to providers</span></div>
+    </div>
+
+
+    <div id="chatWidget">
+
+    <!-- Toggle Button -->
+    <div id="chatToggle" onclick="toggleChat()">)🤖</div>
+
+    <!-- Chat Window -->
+    <div id="chatWindow">
+
+      <div class="chat-header">
+        🤖 Customer Support Bot
+      </div>
+
+      <!-- Chat Box -->
+      <div id="chatBox" class="chat-box"></div>
+
+      <!-- Input Area -->
+      <div class="chat-input-area">
+        <input 
+          id="chatInput" 
+          placeholder="Hi, how can I help you?" 
+        />
+        <button onclick="handleChat()">Send</button>
+      </div>
+
+    </div>
+
+  </div>
+  </section>
+</header>
+
+
+<script>
+function handleAuth(event) {
+    event.preventDefault();
+    
+    // Check if confirming email matches for sign up
+    if (event.target.id === 'signupForm') {
+        if (document.getElementById('email').value !== document.getElementById('confirmEmail').value) {
+            alert("Emails do not match!");
+            return;
+        }
+    }
+
+    // Show success and redirect
+    document.getElementById('auth-container').innerHTML = successMsg.innerHTML;
+    setTimeout(() => {
+        window.location.href = "home.html"; // Replace with your home page URL
+    }, 2000);
+}
+
+loginForm.addEventListener('submit', handleAuth);
+signupForm.addEventListener('submit', handleAuth);
+</script>
+
+<script src="CustomerSupportBot.js"></script>
+
+  <script>
+    // Toggle open/close
+    function toggleChat() {
+	  const chatWindow = document.getElementById("chatWindow");
+	  const toggle = document.getElementById("chatToggle");
+
+	  chatWindow.classList.toggle("open");
+
+	  // Change icon
+	  if (chatWindow.classList.contains("open")) {
+		toggle.innerHTML = "✖"; // close icon
+	  } else {
+		toggle.innerHTML = "💬"; // chat icon
+	  }
+	}
+
+    // Press ENTER to send
+    document.addEventListener("DOMContentLoaded", function () {
+      const input = document.getElementById("chatInput");
+
+      input.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          handleChat();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
