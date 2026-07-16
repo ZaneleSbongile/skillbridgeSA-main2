@@ -81,6 +81,7 @@ body {
 
 h1 { 
     font-weight: 80px; 
+    font-family: 'Barlow Condensed';
     color: #fff; 
     line-height: 1.1; 
     margin-bottom: 20px; 
