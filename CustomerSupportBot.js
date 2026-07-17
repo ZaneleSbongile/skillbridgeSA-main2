@@ -27,10 +27,10 @@ async function loadKnowledge() {
     
 Business Info:
 
-- Shoe size: 10
-- Colors available: red, black, white
-- Delivery time: 10 - 15 days
-- Location: Limpopo
+- Service providers: any field, varified
+- Collaboration: TUT, UJ, UP and other varsities
+- Internships available: on the intership page
+- Service location: All provices in SA
 
 `;
 }
