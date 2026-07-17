@@ -197,7 +197,7 @@ input:focus{
     cursor:pointer;
 }
 
-button{
+#log-in-btn{
     width:100%;
     padding:12px;
     background:royalblue;
@@ -208,9 +208,6 @@ button{
     cursor:pointer;
 }
 
-button:hover{
-    background:#284ebf;
-}
 
 .link{
     text-align:center;
